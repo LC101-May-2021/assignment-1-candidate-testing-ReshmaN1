@@ -67,7 +67,7 @@ function gradeQuiz(candidateAnswers) {
   }
   
   
-
+  grade = grade *100;
   return grade;
 }
 
