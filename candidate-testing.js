@@ -58,14 +58,12 @@ function gradeQuiz(candidateAnswers) {
    }
     
   let grade = correctAnswerCount /(questions.length)
-  console.log ("can Twin");
-  console.log("correctAnswer:"+grade);
-  console.log( ">>> overall grade : "+ grade *100 +"%  on test"+ (" (2 of 5 responses correct) <<<"));
+  console.log( ">>> Overall Grade: "+ grade*100 +"%"+" ("+correctAnswerCount+" of "+candidateAnswers.length+" responses correct) <<<");
   
   if ([grade * 100]>[ 8*100]){
-  console.log ("PASS!");
+    console.log ("PASS!");
   }else if ([grade *100] < [8*100]){
-  console.log(" >>>status : FAILED ! <<<");
+    console.log(" >>> Status : FAILED <<<");
   }
   
   
