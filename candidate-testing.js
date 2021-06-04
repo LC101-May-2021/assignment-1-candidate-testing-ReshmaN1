@@ -44,16 +44,30 @@ function gradeQuiz(candidateAnswers) {
    }*/
    console.log("\n\n")
    console.log("Candidate Name: "+candidateName);
+   let correctAnswerCount=0;
 
    for(let i=0;i<candidateAnswers.length;i++){
     console.log((i+1)+") "+questions[i] )
     console.log("Your Answer: "+candidateAnswers[i]);
     console.log("Correct Answer: "+correctAnswers[i]);
     console.log("   ");
+    if(candidateAnswers[i].toUpperCase() == correctAnswers[i].toUpperCase()){
+      correctAnswerCount++;
+    }
 
    }
     
-  let grade;
+  let grade = correctAnswerCount /(questions.length)
+  console.log ("can Twin");
+  console.log("correctAnswer:"+grade);
+  console.log( ">>> overall grade : "+ grade *100 +"%  on test"+ (" (2 of 5 responses correct) <<<"));
+  
+  if ([grade * 100]>[ 8*100]){
+  console.log ("PASS!");
+  }else if ([grade *100] < [8*100]){
+  console.log(" >>>status : FAILED ! <<<");
+  }
+  
   
 
   return grade;
