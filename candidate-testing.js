@@ -60,9 +60,9 @@ function gradeQuiz(candidateAnswers) {
   let grade = correctAnswerCount /(questions.length)
   console.log( ">>> Overall Grade: "+ grade*100 +"%"+" ("+correctAnswerCount+" of "+candidateAnswers.length+" responses correct) <<<");
   
-  if ([grade * 100]>[ 8*100]){
+  if ([grade * 100]>=[ 0.8*100]){
     console.log ("PASS!");
-  }else if ([grade *100] < [8*100]){
+  }else if ([grade *100] < [0.8*100]){
     console.log(" >>> Status : FAILED <<<");
   }
   
